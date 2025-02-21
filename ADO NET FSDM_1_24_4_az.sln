@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. SqlConnection, SqlDataReader", "ADO NET 01. SqlConnection, SqlDataReader\ADO NET 01. SqlConnection, SqlDataReader.csproj", "{4D6119DA-CF24-4084-91BA-6983177EE167}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 01", "ADO NET 01", "{37A5C011-9D6E-4B93-87AB-AE67C314B887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. Sql Read Data", "ADO NET 01. Sql Read Data\ADO NET 01. Sql Read Data.csproj", "{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,16 @@ Global
 		{4D6119DA-CF24-4084-91BA-6983177EE167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D6119DA-CF24-4084-91BA-6983177EE167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D6119DA-CF24-4084-91BA-6983177EE167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D6119DA-CF24-4084-91BA-6983177EE167} = {37A5C011-9D6E-4B93-87AB-AE67C314B887}
+		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1} = {37A5C011-9D6E-4B93-87AB-AE67C314B887}
 	EndGlobalSection
 EndGlobal
