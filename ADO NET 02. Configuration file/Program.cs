@@ -11,7 +11,7 @@ using System.Configuration;
 //                            Integrated Security=True;Trust Server Certificate=True;";
 
 
-// connection string in config file
+// connection string in xml config file
 //string connectionString = ConfigurationManager
 //                    .ConnectionStrings["MyConnectionString"]
 //                    .ConnectionString;

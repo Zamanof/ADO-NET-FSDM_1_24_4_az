@@ -16,5 +16,17 @@ using (SqlConnection connection = new(connectionString))
                                SELECT Id, Pages, Name
                                FROM Books;", connection);
     SqlDataReader reader = command.ExecuteReader();
+    do
+    {
+        while (reader.Read())
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                Console.Write($"{reader[i]}     \t\t");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine("\t\t");
 
+    } while (reader.NextResult());
 }
