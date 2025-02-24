@@ -61,7 +61,7 @@ while (reader.Read())
     }
     Console.WriteLine();
     for (int i = 0; i < reader.FieldCount; i++)
-    {
+    { 
         Console.Write($"{reader[i]}              ");
     }
 }

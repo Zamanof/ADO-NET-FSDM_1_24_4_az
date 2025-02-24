@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. SqlConnection, SqlDataReader", "ADO NET 01. SqlConnection, SqlDataReader\ADO NET 01. SqlConnection, SqlDataReader.csproj", "{4D6119DA-CF24-4084-91BA-6983177EE167}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 01", "ADO NET 01", "{37A5C011-9D6E-4B93-87AB-AE67C314B887}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. Sql Read Data", "ADO NET 01. Sql Read Data\ADO NET 01. Sql Read Data.csproj", "{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 02", "ADO NET 02", "{36C2DDA8-625A-40B4-842E-C0A271ACD3A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 02. Configuration file", "ADO NET 02. Configuration file\ADO NET 02. Configuration file.csproj", "{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,10 @@ Global
 		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4D6119DA-CF24-4084-91BA-6983177EE167} = {37A5C011-9D6E-4B93-87AB-AE67C314B887}
 		{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1} = {37A5C011-9D6E-4B93-87AB-AE67C314B887}
+		{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7} = {36C2DDA8-625A-40B4-842E-C0A271ACD3A9}
 	EndGlobalSection
 EndGlobal
