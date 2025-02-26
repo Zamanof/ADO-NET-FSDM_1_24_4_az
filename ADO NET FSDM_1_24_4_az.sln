@@ -3,21 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. SqlConnection, SqlDataReader", "ADO NET 01. SqlConnection, SqlDataReader\ADO NET 01. SqlConnection, SqlDataReader.csproj", "{4D6119DA-CF24-4084-91BA-6983177EE167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 01. SqlConnection, SqlDataReader", "ADO NET 01. SqlConnection, SqlDataReader\ADO NET 01. SqlConnection, SqlDataReader.csproj", "{4D6119DA-CF24-4084-91BA-6983177EE167}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 01", "ADO NET 01", "{37A5C011-9D6E-4B93-87AB-AE67C314B887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 01. Sql Read Data", "ADO NET 01. Sql Read Data\ADO NET 01. Sql Read Data.csproj", "{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 01. Sql Read Data", "ADO NET 01. Sql Read Data\ADO NET 01. Sql Read Data.csproj", "{CB8CD2BE-ADA8-430E-9DA9-D3C718AB07F1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 02", "ADO NET 02", "{36C2DDA8-625A-40B4-842E-C0A271ACD3A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 02. Configuration file", "ADO NET 02. Configuration file\ADO NET 02. Configuration file.csproj", "{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 02. Configuration file", "ADO NET 02. Configuration file\ADO NET 02. Configuration file.csproj", "{8C066E4A-B35B-4A3E-8AE0-47FAFE7C52E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 02. Multi Query", "ADO NET 02. Multi Query\ADO NET 02. Multi Query.csproj", "{6B723BD3-9110-4B82-80DD-841D3CDECDFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 02. Multi Query", "ADO NET 02. Multi Query\ADO NET 02. Multi Query.csproj", "{6B723BD3-9110-4B82-80DD-841D3CDECDFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 02. Parametrized query", "ADO NET 02. Parametrized query\ADO NET 02. Parametrized query.csproj", "{45EF4989-F9F5-4189-907F-5A95FF11BD59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 02. Parametrized query", "ADO NET 02. Parametrized query\ADO NET 02. Parametrized query.csproj", "{45EF4989-F9F5-4189-907F-5A95FF11BD59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 02. Stored procedure execute", "ADO NET 02. Stored procedure execute\ADO NET 02. Stored procedure execute.csproj", "{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 02. Stored procedure execute", "ADO NET 02. Stored procedure execute\ADO NET 02. Stored procedure execute.csproj", "{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO NET 03", "ADO NET 03", "{C454E191-521F-4C4D-B4D8-2F0923E02992}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 03. Entity intro", "ADO NET 03. Entity intro\ADO NET 03. Entity intro.csproj", "{E2979370-5051-4ECF-9CA5-1BAC9E72977B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 03. Database First", "ADO NET 03. Database First\ADO NET 03. Database First.csproj", "{D49BE549-41BE-4373-A175-E50817518FA1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO NET 03. Database First Scaffolding", "ADO NET 03. Database First Scaffolding\ADO NET 03. Database First Scaffolding.csproj", "{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO NET 03. LINQ For Entity", "ADO NET 03. LINQ For Entity\ADO NET 03. LINQ For Entity.csproj", "{E76D365D-7C2A-4DB2-A906-66A0FA8698C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +59,22 @@ Global
 		{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2979370-5051-4ECF-9CA5-1BAC9E72977B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2979370-5051-4ECF-9CA5-1BAC9E72977B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2979370-5051-4ECF-9CA5-1BAC9E72977B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2979370-5051-4ECF-9CA5-1BAC9E72977B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49BE549-41BE-4373-A175-E50817518FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49BE549-41BE-4373-A175-E50817518FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49BE549-41BE-4373-A175-E50817518FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49BE549-41BE-4373-A175-E50817518FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76D365D-7C2A-4DB2-A906-66A0FA8698C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76D365D-7C2A-4DB2-A906-66A0FA8698C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76D365D-7C2A-4DB2-A906-66A0FA8698C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76D365D-7C2A-4DB2-A906-66A0FA8698C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +86,12 @@ Global
 		{6B723BD3-9110-4B82-80DD-841D3CDECDFF} = {36C2DDA8-625A-40B4-842E-C0A271ACD3A9}
 		{45EF4989-F9F5-4189-907F-5A95FF11BD59} = {36C2DDA8-625A-40B4-842E-C0A271ACD3A9}
 		{2D9F3764-C780-49CD-AF0E-AB1E74A4C9F7} = {36C2DDA8-625A-40B4-842E-C0A271ACD3A9}
+		{E2979370-5051-4ECF-9CA5-1BAC9E72977B} = {C454E191-521F-4C4D-B4D8-2F0923E02992}
+		{D49BE549-41BE-4373-A175-E50817518FA1} = {C454E191-521F-4C4D-B4D8-2F0923E02992}
+		{DC6142D3-C0E5-44DD-89BC-F7D9D65C73D9} = {C454E191-521F-4C4D-B4D8-2F0923E02992}
+		{E76D365D-7C2A-4DB2-A906-66A0FA8698C2} = {C454E191-521F-4C4D-B4D8-2F0923E02992}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6346978-2787-4413-8CBA-239ED4C6FBB7}
 	EndGlobalSection
 EndGlobal
