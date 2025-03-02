@@ -149,6 +149,7 @@ using LibraryContext db = new();
 
 #endregion
 
+#region LINQ to Entities
 /* 
     https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities
     LINQ to Entities:
@@ -183,4 +184,5 @@ using LibraryContext db = new();
         SkipWhile
         ToList
 */
+#endregion
 
