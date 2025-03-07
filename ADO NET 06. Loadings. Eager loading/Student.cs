@@ -7,7 +7,7 @@ internal class Student
     public string LastName { get; set; }
     public int Age { get; set; }
 
-    public int GroupId { get; set; }
+    public int GroupId { get; set; } // Foreign Key
     public virtual Group Group { get; set; } // Navigation Property
     public override string ToString()
     {
