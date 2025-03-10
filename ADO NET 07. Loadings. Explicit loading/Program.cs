@@ -1,18 +1,17 @@
-﻿// Read relational datas
+﻿using ADO_NET_07._Loadings._Explicit_loading;
+using Microsoft.EntityFrameworkCore;
+// Read relational data
 
-// + Eager loading
-// - Explicit loading
+// - Eager loading
+// + Explicit loading
 // - Lazy loading
 
-
-using ADO_NET_06._Loadings._Eager_loading;
-using Microsoft.EntityFrameworkCore;
-
 #region Add Data
-// Add Data
+
 //using (var db = new ApplicationContext())
 //{
-//List<Student> students = new List<Student>
+//    db.Database.EnsureCreated();
+//    List<Student> students = new List<Student>
 //    {
 //        new Student { FirstName = "Ali", LastName = "Hüseynov", Age = 20 },
 //        new Student { FirstName = "Aysel", LastName = "Məmmədova", Age = 19 },
@@ -36,7 +35,7 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "Ramin", LastName = "Sultanov", Age = 24 }
 //    };
 
-//List<Student> physicists = new List<Student>
+//    List<Student> physicists = new List<Student>
 //    {
 //        new Student { FirstName = "Albert", LastName = "Einstein", Age = 76 },
 //        new Student { FirstName = "Isaac", LastName = "Newton", Age = 84 },
@@ -49,14 +48,14 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "Erwin", LastName = "Schrödinger", Age = 73 },
 //        new Student { FirstName = "Werner", LastName = "Heisenberg", Age = 74 }
 //    };
-//db.Groups.AddRange(
-//    new Group() { GroupName = "FSDM_13_13_13_az", Students = students },
-//    new Group() { GroupName = "Physicist", Students = physicists },
-//    new Group()
-//    {
-//        GroupName = "DC Group",
-//        Students = new List<Student>
-//    {
+//    db.Groups.AddRange(
+//        new Group() { GroupName = "FSDM_13_13_13_az", Students = students },
+//        new Group() { GroupName = "Physicist", Students = physicists },
+//        new Group()
+//        {
+//            GroupName = "DC Group",
+//            Students = new List<Student>
+//        {
 //        new Student { FirstName = "Bruce", LastName = "Wayne", Age = 35 },
 //        new Student { FirstName = "Clark", LastName = "Kent", Age = 33 },
 //        new Student { FirstName = "Diana", LastName = "Prince", Age = 3000 },
@@ -70,45 +69,33 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "J'onn", LastName = "J'onzz", Age = 500 },
 //        new Student { FirstName = "Kara", LastName = "Zor-El", Age = 27 },
 //        new Student { FirstName = "Selina", LastName = "Kyle", Age = 29 }
-//    }
-//    });
+//        }
+//        });
 
-//db.SaveChanges();
-//var groups = db.Groups.ToList();
-
-//foreach (var group in groups)
-//{
-//    Console.WriteLine(group);
-//    foreach (var student in group.Students)
-//    {
-//        Console.WriteLine($"    {student}");
-//    }
-//}
+//    db.SaveChanges();
 //}
 #endregion
 
-#region Eager loading, Include(), ThenInclude() 
+#region Explicit loading Load()
+// Load()
+using var db = new ApplicationContext();
+var group = db.Groups.FirstOrDefault(g => g.Id == 54);
 
-using (var db = new ApplicationContext())
+if (group is not null)
 {
-    var groups = db.Groups.Include(g=> g.Students).ToList();
-    foreach (var group in groups)
-    {
-        Console.WriteLine(group);
-        foreach (var student in group.Students)
-        {
-            Console.WriteLine($"    {student}");
-        }
-    }
-
-    //var students = db.Students.Include(s=>s.Group).ToList();
-
-    //foreach (var student in students)
-    //{
-    //    Console.WriteLine($"{student} - {student.Group}");
-    //}
+    db.Students.Where(s => s.GroupId == group.Id).Load();
+    Console.WriteLine($"    {group}");
+    group.Students.ForEach(Console.WriteLine);
+}
+else
+{
+    Console.WriteLine("Group not found!!");
 }
 
+/*
+SELECT *
+FROM Students
+WHERE GroupId = 2
+ */
+
 #endregion
-
-

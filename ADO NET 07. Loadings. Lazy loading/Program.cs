@@ -1,18 +1,25 @@
-﻿// Read relational datas
-
-// + Eager loading
-// - Explicit loading
-// - Lazy loading
-
-
-using ADO_NET_06._Loadings._Eager_loading;
+﻿using ADO_NET_07._Loadings._Lazy_loading;
 using Microsoft.EntityFrameworkCore;
+// Read relational data
+
+// - Eager loading
+// - Explicit loading
+// + Lazy loading
+
+// Lazy loading ile ishlemek uchun
+// 1. Microsoft.EntityFrameworkCore.Proxies nuget yuklenmelidir
+// 2. Konfiqurasiyaya .UseLazyLoadingProxies() elave edilmelidir
+// 3. Relation(elaqeler) ile baqli property-ler (navigation property ve s.)
+// virtual olmalidir ve toreme uchun achiq olmalidir
+// 4. Modelleri tesvir eden butun class-lar public olmalidir;
+
 
 #region Add Data
-// Add Data
+
 //using (var db = new ApplicationContext())
 //{
-//List<Student> students = new List<Student>
+//    db.Database.EnsureCreated();
+//    List<Student> students = new List<Student>
 //    {
 //        new Student { FirstName = "Ali", LastName = "Hüseynov", Age = 20 },
 //        new Student { FirstName = "Aysel", LastName = "Məmmədova", Age = 19 },
@@ -36,7 +43,7 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "Ramin", LastName = "Sultanov", Age = 24 }
 //    };
 
-//List<Student> physicists = new List<Student>
+//    List<Student> physicists = new List<Student>
 //    {
 //        new Student { FirstName = "Albert", LastName = "Einstein", Age = 76 },
 //        new Student { FirstName = "Isaac", LastName = "Newton", Age = 84 },
@@ -49,14 +56,14 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "Erwin", LastName = "Schrödinger", Age = 73 },
 //        new Student { FirstName = "Werner", LastName = "Heisenberg", Age = 74 }
 //    };
-//db.Groups.AddRange(
-//    new Group() { GroupName = "FSDM_13_13_13_az", Students = students },
-//    new Group() { GroupName = "Physicist", Students = physicists },
-//    new Group()
-//    {
-//        GroupName = "DC Group",
-//        Students = new List<Student>
-//    {
+//    db.Groups.AddRange(
+//        new Group() { GroupName = "FSDM_13_13_13_az", Students = students },
+//        new Group() { GroupName = "Physicist", Students = physicists },
+//        new Group()
+//        {
+//            GroupName = "DC Group",
+//            Students = new List<Student>
+//        {
 //        new Student { FirstName = "Bruce", LastName = "Wayne", Age = 35 },
 //        new Student { FirstName = "Clark", LastName = "Kent", Age = 33 },
 //        new Student { FirstName = "Diana", LastName = "Prince", Age = 3000 },
@@ -70,45 +77,37 @@ using Microsoft.EntityFrameworkCore;
 //        new Student { FirstName = "J'onn", LastName = "J'onzz", Age = 500 },
 //        new Student { FirstName = "Kara", LastName = "Zor-El", Age = 27 },
 //        new Student { FirstName = "Selina", LastName = "Kyle", Age = 29 }
-//    }
-//    });
+//        }
+//        });
 
-//db.SaveChanges();
-//var groups = db.Groups.ToList();
+//    db.SaveChanges();
+//}
+#endregion
 
-//foreach (var group in groups)
+#region Lazy loading
+
+//using (var db = new ApplicationContext())
 //{
-//    Console.WriteLine(group);
-//    foreach (var student in group.Students)
+//    var groups = db.Groups.ToList();
+//    foreach (var group in groups)
 //    {
-//        Console.WriteLine($"    {student}");
+//        Console.WriteLine(group);
+//        foreach(var student in group.Students)
+//        {
+//            Console.WriteLine($"    {student}");
+//        }
+//    }
+//    Console.ReadKey();
+
+//    var groups2 = db.Groups.ToList();
+//    foreach (var group in groups2)
+//    {
+//        Console.WriteLine(group);
+//        foreach (var student in group.Students)
+//        {
+//            Console.WriteLine($"    {student}");
+//        }
 //    }
 //}
-//}
-#endregion
-
-#region Eager loading, Include(), ThenInclude() 
-
-using (var db = new ApplicationContext())
-{
-    var groups = db.Groups.Include(g=> g.Students).ToList();
-    foreach (var group in groups)
-    {
-        Console.WriteLine(group);
-        foreach (var student in group.Students)
-        {
-            Console.WriteLine($"    {student}");
-        }
-    }
-
-    //var students = db.Students.Include(s=>s.Group).ToList();
-
-    //foreach (var student in students)
-    //{
-    //    Console.WriteLine($"{student} - {student.Group}");
-    //}
-}
 
 #endregion
-
-
