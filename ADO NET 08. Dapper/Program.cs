@@ -25,4 +25,4 @@ IAuthorRepository repo = new AuthorRepository(new SqlConnection(), cs);
 //repo.RemoveAuthor(1);
 #endregion
 
-Console.WriteLine(repo.GetAuthorById("2"));
+Console.WriteLine(repo.GetAuthorById("2; DROP TABLE Author;"));
